@@ -13,26 +13,26 @@ public final class App {
 
     /**
      * Says hello to the world.
-     * 
+     *
      * @param args The arguments of the program.
      * @throws GitAPIException
      * @throws TransportException
      * @throws InvalidRemoteException
      */
     public static void main(String[] args) throws InvalidRemoteException, TransportException, GitAPIException {
-        GitClient gitClient = new GitClient("https://github.com/username/repo.git", "/path/to/local/repo");
-        try {
+        GitClient gitClient = new GitClient("git@github.com:SanChiaki/langchain-learning.git", "./langchain-learning");
 
-            // Make changes to the repository
-            // ...
+        // try {
+        //     // Make changes to the repository
+        //     // ...
 
-            // Commit changes
-            gitClient.commitRepository("Commit message");
+        //     // Commit changes
+        //     gitClient.commitRepository("Commit message")    ;
 
-            // Push changes
-            gitClient.pushRepository();
-        } catch (GitAPIException e) {
-            e.printStackTrace();
-        }
+        //     // Push changes
+        //     gitClient.pushRepository();
+        // } catch (GitAPIException e) {
+        //     e.printStackTrace();
+        // }
     }
 }
